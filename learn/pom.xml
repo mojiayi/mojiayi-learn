@@ -9,6 +9,7 @@
 
 	<modules>
 		<module>../learn-dbcp</module>
+		<module>../learn-netty</module>
 	</modules>
 	
 	<properties>
