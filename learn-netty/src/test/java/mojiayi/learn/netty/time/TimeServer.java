@@ -15,11 +15,14 @@ import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
 
+import org.junit.Test;
+
 public class TimeServer {
 	static final boolean SSL = System.getProperty("ssl") != null;
     static final int PORT = Integer.parseInt(System.getProperty("port", "8007"));
 
-    public static void main(String[] args) throws Exception {
+    @Test
+    public void testServer() throws Exception {
         // Configure SSL.
         final SslContext sslCtx;
         if (SSL) {
@@ -46,7 +49,7 @@ public class TimeServer {
                          p.addLast(sslCtx.newHandler(ch.alloc()));
                      }
                      //p.addLast(new LoggingHandler(LogLevel.INFO));
-                     p.addLast(new TimeServerHandler());
+                     p.addLast(new TimeEncoder(), new TimeServerHandler());
                  }
              });
 

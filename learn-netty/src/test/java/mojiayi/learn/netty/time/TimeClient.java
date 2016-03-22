@@ -9,9 +9,12 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+import org.junit.Test;
+
 public class TimeClient {
 
-	public static void main(String[] args) throws Exception {
+	@Test
+	public void testClient() throws Exception {
 		String host = "192.168.2.190";
         int port = 8007;
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -24,7 +27,7 @@ public class TimeClient {
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new TimeClientHandler());
+                    ch.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
                 }
             });
 
