@@ -25,6 +25,7 @@
 	</properties>
 
 	<dependencies>
+		<!-- dependency jars of spring framework start-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -51,17 +52,45 @@
 			<version>${spring.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- dependency jars of spring framework end -->
+		
+		<!-- dependency jars of database start -->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.3.0</version>
+			<version>11.1.0.7.0</version>
 		</dependency>
+		<!-- dependency jars of database end -->
+		
+		<!-- dependency jars of servlet start -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<!-- dependency jars of servlet end -->
+		
+		<!-- dependency jars of json start -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.8</version>
+		</dependency>
+		<!-- dependency jars of json end -->
+		
+		<!-- dependency jars of unit test start -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- dependency jars of unit test end -->
 	</dependencies>
 	<build>
 		<pluginManagement>

@@ -2,6 +2,7 @@ package com.jwt.netty;
 
 import java.nio.charset.Charset;
 
+import com.alibaba.fastjson.JSON;
 import com.hnebang.comm.utils.UserCache;
 
 import io.netty.bootstrap.Bootstrap;
@@ -13,7 +14,6 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import net.sf.json.JSONObject;
 
 /**
  * 说明：
@@ -125,7 +125,7 @@ public class ProtocolClient implements Runnable {
 		String msgType = "bdjdc";
 		RequestMsg m=new RequestMsg("11111", condition, isList, msgType);
 		ProtocolClient p=new ProtocolClient();
-		p.setProtocolMsg((byte)1,JSONObject.fromObject(m).toString());
+		p.setProtocolMsg((byte)1,JSON.toJSONString(m));
 		p.run();
 		System.exit(0);
 	}

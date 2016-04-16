@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class RequestMsg implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4868809002771312978L;
 	private String clientId;
 	private String condition;
 	private int isList;// 0:单个查询，1:列表查询

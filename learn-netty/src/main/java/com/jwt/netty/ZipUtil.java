@@ -9,8 +9,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import org.apache.commons.codec.binary.Base64;
+
 
 // 将一个字符串按照zip方式压缩和解压缩
 public class ZipUtil {
@@ -72,7 +72,7 @@ public class ZipUtil {
 			zout.write(str.getBytes());
 			zout.closeEntry();
 			compressed = out.toByteArray();
-			compressedStr = new BASE64Encoder().encodeBuffer(compressed);
+			compressedStr = Base64.encodeBase64String(compressed);
 		} catch (IOException e) {
 			compressed = null;
 		} finally {
@@ -109,7 +109,7 @@ public class ZipUtil {
 		ZipInputStream zin = null;
 		String decompressed = null;
 		try {
-			byte[] compressed = new BASE64Decoder().decodeBuffer(compressedStr);
+			byte[] compressed = Base64.decodeBase64(compressedStr);
 			out = new ByteArrayOutputStream();
 			in = new ByteArrayInputStream(compressed);
 			zin = new ZipInputStream(in);
