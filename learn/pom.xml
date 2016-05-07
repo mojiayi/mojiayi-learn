@@ -29,7 +29,7 @@
 	</properties>
 
 	<dependencies>
-		<!-- dependency jar of spring begin -->
+		<!-- dependency jars of spring framework start-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -76,7 +76,15 @@
 			<artifactId>aopalliance</artifactId>
 			<version>1.0</version>
 		</dependency>
-		<!-- dependency jar of spring end -->
+		<!-- dependency jars of spring framework end -->
+		
+		<!-- dependency jars of database start -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.1.0</version>
+		</dependency>
+		<!-- dependency jar of database end -->
 
 		<!-- dependency jar of commons series begin -->
 		<dependency>
@@ -137,6 +145,15 @@
 			<version>1.0</version>
 		</dependency>
 		<!-- dependency jar of dom4j end -->
+		
+		<!-- dependency jars of json start -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.8</version>
+		</dependency>
+		<!-- dependency jars of json end -->
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
