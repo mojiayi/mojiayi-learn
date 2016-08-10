@@ -42,3 +42,6 @@ test-output/
 # Other
 *.pyc
 home/been/myApp.log
+*/node_modules/
+*/.gitignore
+*/settings.json
