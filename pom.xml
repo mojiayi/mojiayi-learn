@@ -8,12 +8,12 @@
 	<name>mojiayi learn</name>
 
 	<modules>
-		<module>../learn-dbcp</module>
-		<module>../learn-netty</module>
-		<module>../learn-cxf</module>
-
-		<module>../learn-mqtt</module>
-		<module>../mojiayi-commons</module>
+		<module>learn-dbcp</module>
+		<module>learn-netty</module>
+		<module>learn-cxf</module>
+		<module>learn-javascript</module>
+		<module>learn-mqtt</module>
+		<module>mojiayi-commons</module>
 	</modules>
 	
 	<properties>

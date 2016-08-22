@@ -5,7 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
-import org.apache.commons.lang.StringUtils;
+import mojiayi.learn.commons.lang.StringHelper;
 
 /**
  * @author mojiayi 将一个字符串按照GZIP方式压缩和解压缩
@@ -22,7 +22,7 @@ public class ZipUtil {
 	 */
 	public static String gZip(String str) {
 		try {
-			if (StringUtils.isBlank(str)) {
+			if (StringHelper.isEmpty(str)) {
 				return str;
 			}
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -44,7 +44,7 @@ public class ZipUtil {
 	 */
 	public static String gZip(String str, String charsetName) {
 		try {
-			if (StringUtils.isBlank(str)) {
+			if (StringHelper.isEmpty(str)) {
 				return str;
 			}
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -65,7 +65,7 @@ public class ZipUtil {
 	 */
 	public static String unGzip(String str) {
 		try {
-			if (StringUtils.isBlank(str)) {
+			if (StringHelper.isEmpty(str)) {
 				return str;
 			}
 			ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -91,7 +91,7 @@ public class ZipUtil {
 	 */
 	public static String unGzip(String str, String charsetName) {
 		try {
-			if (StringUtils.isBlank(str)) {
+			if (StringHelper.isEmpty(str)) {
 				return str;
 			}
 			ByteArrayOutputStream out = new ByteArrayOutputStream();

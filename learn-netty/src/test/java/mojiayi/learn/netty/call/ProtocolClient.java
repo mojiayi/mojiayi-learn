@@ -1,8 +1,12 @@
 package mojiayi.learn.netty.call;
 
 import java.nio.charset.Charset;
+import java.util.Date;
 
 import com.alibaba.fastjson.JSON;
+import com.ebang.constants.MQTTConstant;
+import com.ebang.constants.MsgType;
+import com.ebang.pojo.MQTTMessageBean;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -120,9 +124,16 @@ public class ProtocolClient implements Runnable {
 	}
 	
 	public static void main(String[] args) {
-		String condition = "";
-		String msgType = "";
-		RequestMsg m=new RequestMsg("11111", condition, 1, msgType);
+		String messageContent = "0509 paho mqttv3 测试数据20";
+		MQTTMessageBean message = new MQTTMessageBean();
+		message.setClientId("test-clientid");
+		message.setMessageContent(messageContent);
+		message.setMessageType(MQTTConstant.TEXT);
+		message.setPoliceName("张律");
+		message.setPoliceNo("051087");
+		message.setTopicId("topic_chat");
+		message.setAddDate(new Date());
+		RequestMsg m=new RequestMsg("11111", JSON.toJSONString(message), 1, MsgType.MQTT_PUBLISH);
 		ProtocolClient p=new ProtocolClient();
 		p.setProtocolMsg((byte)1,JSON.toJSONString(m));
 		p.run();

@@ -18,6 +18,11 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>com.ebang.jwt</groupId>
+			<artifactId>police-tool-bean</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
 			<groupId>mojiayi.learn</groupId>
 			<artifactId>mojiayi-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
