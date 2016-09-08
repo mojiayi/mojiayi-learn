@@ -6,24 +6,19 @@
 	<name>learn-netty Webapp</name>
 
 	<parent>
-		<groupId>mojiayi.learn</groupId>
-		<artifactId>learn</artifactId>
+		<groupId>com.mojiayi.learn</groupId>
+		<artifactId>mojiayi-learn</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../learn/pom.xml</relativePath>
 	</parent>
 
 	<properties>
 		<netty.groupId>io.netty</netty.groupId>
 		<netty.version>4.0.32.Final</netty.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
-			<groupId>com.ebang.jwt</groupId>
-			<artifactId>police-tool-bean</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>mojiayi.learn</groupId>
+			<groupId>com.mojiayi.learn</groupId>
 			<artifactId>mojiayi-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -47,20 +42,9 @@
 			<artifactId>netty-codec-http</artifactId>
 			<version>${netty.version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.9</version>
-		</dependency>
 	</dependencies>
 
 	<build>
 		<finalName>learn-netty</finalName>
-		<resources>
-			<resource>
-				<directory>${basedir}/src/main/resources</directory>
-			</resource>
-		</resources>
 	</build>
 </project>

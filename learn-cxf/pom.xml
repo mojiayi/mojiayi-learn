@@ -2,15 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>learn-cxf</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>learn-cxf Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<parent>
-		<groupId>mojiayi.learn</groupId>
-		<artifactId>learn</artifactId>
+		<groupId>com.mojiayi.learn</groupId>
+		<artifactId>mojiayi-learn</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../learn/pom.xml</relativePath>
 	</parent>
 
 	<dependencies>
@@ -19,36 +18,17 @@
 			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
 			<version>3.1.5</version>
 		</dependency>
+
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>
 			<version>2.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-jaxrs</artifactId>
 			<version>1.9.13</version>
-		</dependency>
-		<!-- 
-		<dependency>
-			<groupId>org.jdom</groupId>
-			<artifactId>jdom</artifactId>
-			<version>1.1.3</version>
-		</dependency> -->
-		<!-- <dependency>
-			<groupId>xom</groupId>
-			<artifactId>xom</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sf.json-lib</groupId>
-			<artifactId>json-lib</artifactId>
-			<version>2.2.3</version>
-		</dependency> -->
-		<dependency>
-			<groupId>dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>1.6.1</version>
 		</dependency>
 	</dependencies>
 	<build>
