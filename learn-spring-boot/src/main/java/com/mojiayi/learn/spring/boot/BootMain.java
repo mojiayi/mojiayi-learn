@@ -1,5 +1,7 @@
 package com.mojiayi.learn.spring.boot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,11 +12,15 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 public class BootMain extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer {
+	private static final Logger LOG = LoggerFactory.getLogger("ROLLING_FILE");
+	//private static final Logger LOG_BIG = LoggerFactory.getLogger("ROLLING_BIG_FILE");
+	
 	@Value("${port}")
 	private int port;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		LOG.info("output log in level info");
+		//LOG_BIG.debug("output log in level debug");
 		Object[] sources = {BootMain.class, "file:resources/spring-boot-config.xml"};
 		SpringApplication.run(sources, args);
 	}
