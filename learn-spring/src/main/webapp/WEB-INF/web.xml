@@ -5,21 +5,33 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:/conf/applicationContext.xml</param-value>
+		<param-value>classpath:conf/learn-spring-config.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
 	<servlet>
-		<servlet-name>baobaotao</servlet-name>
+		<servlet-name>mojiayi-spring</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:conf/learn-spring-servlet.xml</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-
 	<servlet-mapping>
-		<servlet-name>baobaotao</servlet-name>
-		<url-pattern>/</url-pattern>
+		<servlet-name>mojiayi-spring</servlet-name>
+		<url-pattern>/f/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mojiayi-spring</servlet-name>
+		<url-pattern>/s/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>mojiayi-spring</servlet-name>
+		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
 
+	<welcome-file-list>index.html</welcome-file-list>
 </web-app>
