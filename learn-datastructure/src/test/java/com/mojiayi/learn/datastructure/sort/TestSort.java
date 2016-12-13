@@ -12,4 +12,14 @@ public class TestSort extends MojiayiSort {
             System.out.print(ele + ",");
         }
     }
+
+    @Test
+    public void testShellSort() {
+        int[] arr = { 34, 8, 64, 51, 32, 21 };
+        ShellSort instance = new ShellSort();
+        int[] sortedArr = instance.shellSort(arr, SORT_TYPE_ASC);
+        for (int ele : sortedArr) {
+            System.out.print(ele + ",");
+        }
+    }
 }
