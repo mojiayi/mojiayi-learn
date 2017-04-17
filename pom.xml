@@ -9,109 +9,38 @@
 	<name>mojiayi learn</name>
 
 	<modules>
-		<module>learn-cxf</module>
-		<module>learn-mqtt</module>
-		<module>learn-spring</module>
-		<module>learn-spring-boot</module>
+		<!-- <module>learn-datastructure</module> -->
+		<!-- <module>learn-cxf</module> -->
+		<!-- <module>learn-mqtt</module> -->
+		<!-- <module>learn-spring</module> -->
+		<!-- <module>learn-spring-boot</module> -->
 		<module>mojiayi-commons</module>
-		<!-- 
-		<module>learn-netty</module>
-		<module>learn-dbcp</module> 
-		<module>learn-javascript</module>
-		 -->
+		<!-- <module>learn-netty</module> -->
+		<!-- <module>learn-dbcp</module>  -->
+		<!-- <module>learn-javascript</module> -->
 	</modules>
 
 	<properties>
 		<java.version>1.7</java.version>
-		<spring.version>4.3.2.RELEASE</spring.version>
+		<spring.version>4.3.3.RELEASE</spring.version>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<resource.plugin.version>2.6</resource.plugin.version>
+		<commons.lang3.version>3.4</commons.lang3.version>
 	</properties>
 
 	<dependencies>
 		<!-- dependency jar of commons series begin -->
 		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-discovery</groupId>
-			<artifactId>commons-discovery</artifactId>
-			<version>0.2</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-collections</groupId>
-			<artifactId>commons-collections</artifactId>
-			<version>3.2</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-			<version>1.7.0</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-pool</groupId>
-			<artifactId>commons-pool</artifactId>
-			<version>1.5.5</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<version>2.6</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.3.1</version>
-		</dependency>
-		<!-- dependency jar of commons series end -->
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.8</version>
-		</dependency>
-
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.8</version>
-		</dependency>
+		
 	</dependencies>
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>2.3.2</version>
-					<configuration>
-						<source>${jdk.version}</source>
-						<target>${jdk.version}</target>
-						<encoding>${project.build.sourceEncoding}</encoding>
-						<showWarnings>true</showWarnings>
-					</configuration>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>${resource.plugin.version}</version>
-					<configuration>
-						<encoding>${project.build.sourceEncoding}</encoding>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+	
 </project>
