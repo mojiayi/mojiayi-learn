@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="auth2-web:war">
+    <output-path>D:/svn/tanzk/dev/auth2/auth2-web/target</output-path>
+    <root id="archive" name="auth2-web.war">
+      <element id="artifact" artifact-name="auth2-web:war exploded" />
+    </root>
+  </artifact>
+</component>
