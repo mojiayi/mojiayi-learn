@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="auth2-demo:war">
-    <output-path>D:/svn/tanzk/dev/auth2/auth2-demo/target</output-path>
-    <root id="archive" name="auth2-demo.war">
-      <element id="artifact" artifact-name="auth2-demo:war exploded" />
-    </root>
-  </artifact>
-</component>
