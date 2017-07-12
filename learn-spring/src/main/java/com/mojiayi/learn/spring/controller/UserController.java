@@ -15,11 +15,28 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @RequestMapping("/user")
-    @JsonView(View.Summary.class)
+    @RequestMapping("/user-all")
     public List<User> getAllMessages() {
         List<User> list = new ArrayList<>();
         User user = new User(123L, "first", "last");
+        list.add(user);
+        return list;
+    }
+
+    @RequestMapping("/user-detail")
+    @JsonView(View.SummaryDetail.class)
+    public List<User> getMessageDetails() {
+        List<User> list = new ArrayList<>();
+        User user = new User(123L, "first", "last", "email", "address");
+        list.add(user);
+        return list;
+    }
+
+    @RequestMapping("/user-brief")
+    @JsonView(View.Summary.class)
+    public List<User> getMessageBrief() {
+        List<User> list = new ArrayList<>();
+        User user = new User(123L, "first", "last", "email", "address");
         list.add(user);
         return list;
     }

@@ -16,7 +16,10 @@ public class User {
     @JsonView(View.Summary.class)
     private String lastname;
 
+    @JsonView(View.SummaryDetail.class)
     private String email;
+
+    @JsonView(View.SummaryDetail.class)
     private String address;
     private String postalCode;
     private String city;
@@ -26,6 +29,14 @@ public class User {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
+    }
+
+    public User(Long id, String firstname, String lastname, String email, String address) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.address = address;
     }
 
     public Long getId() {

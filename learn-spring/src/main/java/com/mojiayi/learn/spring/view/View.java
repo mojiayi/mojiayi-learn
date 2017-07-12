@@ -5,4 +5,6 @@ package com.mojiayi.learn.spring.view;
  */
 public class View {
     public interface Summary {}
+
+    public interface SummaryDetail extends Summary {}
 }
