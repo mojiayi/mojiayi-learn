@@ -22,4 +22,14 @@ public class TestSort extends MojiayiSort {
             System.out.print(ele + ",");
         }
     }
+
+    @Test
+    public void testQuickSort() {
+        int[] arr = { 34, 8, 64, 51, 32, 21 };
+        QuickSort quickSort = new QuickSort();
+        int[] sortedArr = quickSort.sort(arr, 0, arr.length - 1);
+        for (int ele : sortedArr) {
+            System.out.print(ele + ",");
+        }
+    }
 }
