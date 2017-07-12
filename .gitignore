@@ -2,7 +2,9 @@
 .project
 .classpath
 .settings
+target
 */target/*
 .gitignore
 */bin/*
 .idea
+.idea/*
